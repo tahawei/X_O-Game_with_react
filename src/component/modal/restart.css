@@ -1,0 +1,17 @@
+.restart {
+  text-align: center;
+}
+.restart__title {
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 30px;
+  justify-content: center;
+}
+.restart__btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}

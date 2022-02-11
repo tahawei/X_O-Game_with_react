@@ -1,11 +1,12 @@
 import React from "react";
 import Xicon from "../icons/Xicon";
 import Oicon from "../icons/Oicon";
+import BoardCard from "./BoardCard";
 import "./board.css";
 import "../start/start.css";
 
 const Board = () => {
-  const squars = ["", "x", "o", "", "x", "", "", "o", "o"];
+  const squars = ["", "X", "o", "", "x", "x", "", "o", "o"];
   return (
     <div className="board">
       <div className="board__header">
@@ -32,8 +33,25 @@ const Board = () => {
           </svg>
         </button>
       </div>
-      <div className="board__body">{squars}</div>
-      <div className="board__footer"></div>
+      <div className="board__body">
+        {squars.map((sq, ix) => (
+          <BoardCard key={ix} index={ix} user={sq} active={ix === 4} />
+        ))}
+      </div>
+      <div className="board__footer">
+        <div className="card bg-blue">
+          <p className="text-light">x (you)</p>
+          <strong className="text-2xl">10</strong>
+        </div>
+        <div className="card bg-blue">
+          <p className="text-light">ties</p>
+          <strong className="text-2xl">30</strong>
+        </div>
+        <div className="card bg-blue">
+          <p className="text-light">o (cpu)</p>
+          <strong className="text-2xl">10</strong>
+        </div>
+      </div>
     </div>
   );
 };

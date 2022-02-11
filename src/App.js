@@ -2,6 +2,7 @@
 
 import Start from "./component/start/Start";
 import Board from "./component/board/Board";
+import Modal from "./component/modal/Modal";
 function App() {
   return (
     <div className="App">
@@ -9,6 +10,7 @@ function App() {
         <Start />
         <Board />
       </div>
+      {/* <Modal /> */}
     </div>
   );
 }

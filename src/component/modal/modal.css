@@ -1,0 +1,15 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 999;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+}
+.modal__content {
+  width: 100%;
+  background: var(--color-bg-light);
+}
